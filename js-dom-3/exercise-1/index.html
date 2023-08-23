@@ -4,14 +4,32 @@
     <title>JS-DOM-3 Exercise 1</title>
   </head>
   <body>
-    <select id="mySelect" onChange="s(event)">
-      <option value="programmer">Programmer</option>
-      <option value="doctor">Doctor</option>
-      <option value="creator">Creator</option>
+    <select id="mySelect" onChange="colorSelectorEvent(event) , colorSelectorQuery(event)">
+      <option value="เลือกสี">เลือกสี</option>
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
     </select>
 
     <script>
-      // write your function here.
+      function colorSelectorEvent(event) {
+        console.log(event);
+        alert(event.target.value);
+      }
+
+      function colorSelectorQuery(event) {
+        const selectedValue = document.querySelector("#mySelect").value;
+        alert(selectedValue);
+      }
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
